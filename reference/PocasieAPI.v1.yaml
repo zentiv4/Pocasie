@@ -143,6 +143,24 @@ paths:
                   dateOfBirth: '1996-08-24'
         description: Post the necessary fields for the API to create a new user.
       description: Create a new user.
+  /pocasie:
+    get:
+      summary: Your GET endpoint
+      tags: []
+      responses: {}
+      operationId: ziskanie pocasia
+      description: ziskanie  pocasia s openweatherapi
+      parameters:
+        - schema:
+            type: number
+          in: query
+          name: den
+          description: pocet dni prepocasie
+        - schema:
+            type: string
+          in: query
+          name: zip
+          description: psc
 components:
   schemas:
     User:
