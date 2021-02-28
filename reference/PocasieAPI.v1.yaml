@@ -147,7 +147,33 @@ paths:
     get:
       summary: Your GET endpoint
       tags: []
-      responses: {}
+      responses:
+        '200':
+          description: OK
+          headers:
+            header-0:
+              schema:
+                type: string
+        '201':
+          description: Created
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type:
+                  - object
+                  - integer
+              examples:
+                priklad:
+                  value:
+                    prik: null
+          headers:
+            header-0:
+              schema:
+                type: string
       operationId: ziskanie pocasia
       description: ziskanie  pocasia s openweatherapi
       parameters:
